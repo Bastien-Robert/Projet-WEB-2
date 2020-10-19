@@ -19,7 +19,7 @@ const client = new Client({
  user: 'postgres',
  host: 'localhost',
  password: 'mdpsuperuser',
- database: 'TP5'
+ database: 'Projet'
 })
 
 client.connect()
