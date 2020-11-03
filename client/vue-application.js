@@ -1,11 +1,12 @@
-const connexion = window.httpVueLoader('./components/connexion.vue')
-const register = window.httpVueLoader('./components/Register.vue')
+const Home = window.httpVueLoader('./components/Home.vue')
+const Connexion = window.httpVueLoader('./components/connexion.vue')
+const Register = window.httpVueLoader('./components/Register.vue')
 
 
 const routes = [
-
-    { path: '/connexion', component: connexion },
-    { path: '/Register', component: Register },
+  { path: '/', component: Home },
+  { path: '/connexion', component: Connexion },
+  { path: '/Register', component: Register },
 ]
 
 const router = new VueRouter({
