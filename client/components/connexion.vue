@@ -1,5 +1,5 @@
 <template>
-    <div id ="login">
+    <div id ="connexion">
         <form @submit.prevent="log">
             <input type="text" v-model="email" placeholder="Entrez votre e-mail"/>
             <input type="text" v-model="password" placeholder="Entrez votre mot de passe"/>
@@ -12,8 +12,6 @@
 <script>
 module.exports = {
   props: {
-    articles: { type: Array, default: [] },
-    panier: { type: Object }
   },
   data() {
       return {

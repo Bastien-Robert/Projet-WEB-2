@@ -39,7 +39,7 @@ function toggleMute() {
   }
 
 }
-
+/*
 $(document).ready(function(){
   setTimeout(toggleMute,3000);
-})
+})*/

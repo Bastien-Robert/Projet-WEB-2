@@ -1,12 +1,15 @@
 const Home = window.httpVueLoader('./components/Home.vue')
-const Connexion = window.httpVueLoader('./components/connexion.vue')
+const Connexion = window.httpVueLoader('./components/Connexion.vue')
 const Register = window.httpVueLoader('./components/Register.vue')
-
 
 const routes = [
   { path: '/', component: Home },
   { path: '/connexion', component: Connexion },
-  { path: '/Register', component: Register },
+  { path: '/register', component: Register },
+  { path: '/composants', component: Home},
+  { path: '/boutique', component: Home },
+  { path: '/avousdejouer', component: Home },
+  { path: '/quisommesnous', component: Home },
 ]
 
 const router = new VueRouter({
@@ -14,14 +17,11 @@ const router = new VueRouter({
 })
 
 var app= new Vue({
-
     router,
     el: '#app',
-
-
     methods:{
         async save(email, password){
-          const res = await axios.post('/api/Register',{email:email, password:password})
+          const res = await axios.post('/api/register',{email:email, password:password})
           window.location.href="#/"
         },
     

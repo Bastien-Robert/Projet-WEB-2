@@ -1,7 +1,8 @@
 body
 {
-    margin-top: 0;
+    margin: 0;
 }
+
 
 body.corps{
     background: url(images/black.png),url(images/WP2.png);
@@ -468,7 +469,12 @@ li.ordi p.carac{
     text-shadow:rgb(0, 0, 0) 2px 0 2px;
 }
 
-div.entete#bas{
+.entete#bas{
     border-top: 5px solid;
-    border-color: rgb(214, 96, 16);;
+    border-color: rgb(214, 96, 16);
+}
+
+footer{
+    background-color: rgb(214, 96, 16);
+    text-align: center;
 }

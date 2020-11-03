@@ -12,8 +12,6 @@
 <script>
 module.exports = {
   props: {
-    articles: { type: Array, default: [] },
-    panier: { type: Object }
   },
   data() {
       return {

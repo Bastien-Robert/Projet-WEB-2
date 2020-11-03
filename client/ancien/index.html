@@ -2,11 +2,13 @@
 
 <head>
     <link href='Projet.css' type='text/css' rel='stylesheet' />
-    <script type="text/javascript" src="Projet.js"></script>
-    <script src="vue-application.js"></script>
+    <script type="text/javascript" src="Projet.js">
+    
+    </script>
 </head>
-<body>
+
 <header>
+  <head>
       <title>L'intérieur des PC</title>
       <div class="entete">
         <h1 class="titre"><a href="index.html">L'intérieur des PC</h1></a>
@@ -26,18 +28,28 @@
               <li><a href="Boutique.html">Boutique</a></li>
               <li><a href="Avousdejouer.html">A vous de jouer</a></li>
               <li><a href="Quisommesnous.html">Qui sommes-nous</a></li>
-              <li><a href="connexion.html">connexion</a></li>
+              <li><a href="Connexion.html">connexion</a></li>
             </ul>
           </nav>
       </div>
+  </head>
 </header>
+<body>
+  <video class="video" fullscreen width="1920" height="1080" loop autoplay muted id=VideoId>
+      <source src="pc_showcase.mp4" type="video/mp4">
+  </video>
+  <br><br>
+  <div class="titre_index">Bienvenue sur le site L'intérieur des PC</div>
 
-  <div id="app">
-    <nav>
-      <router-link class="_bouton" to='/'>Accueil</router-link>
-      <router-link class="_bouton"  to='/Register'>Se creer un compte</router-link>
-      <router-link class="_bouton"  to='/connexion'>connection</router-link>
-    </nav>
-  </div>  
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="entete" id="bas">
+    <br><br>
+    <p class="crédit">"L'intérieur des PC" est un site créé par 3 étudiants de L2 à EFREI Paris à l'occasion d'un projet de programmation en 2020</p>
+    <nav role="navigation" class="primary-navigation" id="bas">
+        <ul>
+          <li><a href="Quisommesnous.html">Qui sommes-nous</a></li>
+        </ul>
+      </nav>
+  </div>
 </body>
 </html>
