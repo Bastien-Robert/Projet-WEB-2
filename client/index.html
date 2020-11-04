@@ -36,7 +36,11 @@
         </nav>
     </header>
     
-    <router-view @log-user='logUser'></router-view>
+    <router-view 
+    @log-user='logUser'
+    @save-user='save'
+    ></router-view>
+
     
     <footer>
       <p>&#169;Bastien Robert & Louis Blesse</p>
