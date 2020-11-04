@@ -1,0 +1,166 @@
+<template>
+  <div>
+    <body>
+      <p class="titre">Composants</p>
+      <h2 id="carte-mere" class="titre-composants">La carte mère</h2>
+      <img
+        class="comp"
+        src="https://media.materiel.net/r550/products/MN0005566185_1.jpg"
+      />
+      <p class="par-composants">
+        La carte mère est considérée comme la pièce principale d’un PC. Elle
+        permet de connecter d’autres composants pour assurer le bon
+        fonctionnement d’un ordinateur. Sa présence veille au traitement des
+        données par le biais du processeur. C’est par elle que passe la gestion
+        d’un disque dur, la reproduction des caractères du clavier ou celle des
+        mouvements de la souris. On peut donc considérer la carte mère comme le
+        cœur de l’ordinateur. C'est le composant principal de votre ordinateur,
+        celui qui sert à "tenir" et relier tous les autres.
+      </p>
+
+      <br /><br /><br /><br /><br /><br />
+      <h2 id="processeur" class="titre-composants">Le Processeur (CPU)</h2>
+      <img
+        class="comp"
+        src="https://media.materiel.net/r550/products/MN0005582354_1.jpg"
+      />
+      <p class="par-composants">
+        Si la carte mère peut être considérée comme le cœur d’un système, le
+        processeur est assimilé au cerveau. Il interprète et exécute les
+        instructions qu’il reçoit. Ces dernières sont exprimées dans un langage
+        binaire. Le processeur est une pièce indispensable pour le
+        fonctionnement des programmes ou encore l’affichage-écran. Il sert à
+        l’échange de données entre composants informatiques, notamment en ce qui
+        concerne le disque dur, la carte graphique ou la RAM. Il permet ainsi
+        d’interpréter, de coordonner et d’exécuter différents programmes.
+      </p>
+
+      <br /><br /><br /><br /><br /><br />
+      <h2 id="carte-graphique" class="titre-composants">
+        La carte graphique (GPU)
+      </h2>
+      <img
+        class="comp"
+        src="https://media.materiel.net/r550/products/MN0005271519_1.jpg"
+      />
+      <p class="par-composants">
+        La carte graphique est indissociable de l’affichage d’un écran. Ce
+        dernier y est directement connecté. Elle veille également à alléger la
+        charge du processeur. Elle permet ainsi de parcourir les fonctionnalités
+        de son système d’exploitation, de réaliser du montage vidéo et de la
+        modélisation 3D ou encore de prendre en charge les graphismes d’un jeu
+        vidéo. La fonction première de la carte graphique reste simple. Elle
+        permet l’affichage de graphismes 2D ou 3D sur l’écran d’un PC. La
+        production et la qualité de l’image dépendent de sa mémoire, de sa
+        fréquence, de la connectique et des caractéristiques de l’écran,
+        notamment la résolution.
+      </p>
+
+      <br /><br /><br /><br /><br /><br />
+      <h2 id="RAM" class="titre-composants">La RAM</h2>
+      <img
+        class="comp"
+        src="https://media.materiel.net/r550/products/MN0005221720_1_0005236518_0005236609.jpg"
+      />
+      <p class="par-composants">
+        La RAM est un type de mémoire, en l’occurrence une mémoire vive, en
+        opposition à la mémoire morte. Extrêmement rapide par rapport au disque
+        dur de l’ordinateur, la RAM est indispensable pour une utilisation
+        fluide de n’importe quel PC. La RAM est la mémoire à court terme. D’un
+        point de vue matériel, la RAM se présente sous la forme d’un petit
+        circuit imprimé rectangulaire. On parle ainsi de barrettes de RAM, qui
+        viennent se brancher sur la carte mère de l’ordinateur. La RAM s’efface
+        automatiquement lorsque l’ordinateur s’éteint. Cette mémoire vive est
+        tout simplement indispensable à votre ordinateur : c’est elle qui permet
+        au processeur de stocker temporairement les données dont il a besoin
+        pour lancer un programme. Chaque application utilisée est ainsi lancée
+        sur la RAM. C’est pourquoi plus la RAM est grande, plus l’ordinateur
+        sera rapide et fluide, ainsi qu’en capacité d’exécuter un grand nombre
+        de logiciels ou d’applications en même temps.
+      </p>
+
+      <br /><br /><br /><br /><br /><br />
+      <h2 id="refroidissement" class="titre-composants">
+        Le système de refroidissement
+      </h2>
+      <h3 class="titre-composants-petit">Aircooling</h3>
+      <img
+        class="comp"
+        src="https://media.materiel.net/r550/products/MN0005573567_1.jpg"
+      />
+      <p class="par-composants">
+        Un ventilateur d'ordinateur est un ventilateur installé à l'intérieur
+        d'un ordinateur ou fixé à celui-ci et utilisé pour en refroidir
+        activement le boîtier. Un autre ventilateur est présent dans un pc c'est
+        le ventirad : un composant indispensable qui permet de refroidir le
+        processeur. Ce ventilateur permet d'accélérer le flux d'air et donc
+        d'améliorer le transfert thermique en vue d'un bon refroidissement.
+      </p>
+
+      <br /><br /><br /><br /><br /><br />
+      <h3 class="titre-composants-petit">Watercooling</h3>
+      <img
+        class="comp"
+        src="https://media.materiel.net/r550/products/MN0005608967_1.jpg"
+      />
+      <p class="par-composants">
+        Le watercooling est un système de refroidissement par eau. Provenant de
+        l'industrie lourde, il a été transposé à l'informatique pour offrir une
+        solution silencieuse et efficace pour dissiper la chaleur émise par les
+        composants. Qu'ils soient installés dans un PC portable ou fixe, les
+        circuits intégrés comme le processeur et la carte graphique
+        convertissent une partie de l'énergie qu'ils consomment en chaleur. Il
+        est donc nécessaire de refroidir ces éléments pour garantir leur
+        stabilité de fonctionnement et prolonger leur durée de vie.
+      </p>
+
+      <br /><br /><br /><br /><br /><br />
+      <h2 id="stockage" class="titre-composants">Le stockage</h2>
+      <img
+        class="comp"
+        src="https://media.materiel.net/r550/oproducts/AR201805310150_g1.jpg"
+      />
+      <p class="par-composants">
+        HDD, pour "Hard Disk Drive", désigne un disque dur. C'est une mémoire de
+        masse magnétique utilisée pour stocker des données. Le SSD ("Solid State
+        Drive") quant à lui, est un materiel informatique permettant le stockage
+        de données, constitué de mémoire flash. Ces mémoires sont des éléments
+        immobiles à la différence du disque dur classique, sur lequel les
+        données sont écrites sur un support magnétique mobile.
+      </p>
+
+      <br /><br /><br /><br /><br /><br />
+      <h2 id="alimentation" class="titre-composants">L'alimentation</h2>
+      <img
+        class="comp"
+        src="https://media.materiel.net/r550/oproducts/AR201801040066_g1.jpg"
+      />
+      <p class="par-composants">
+        Bien sûr, sans le courant électrique, rien ne fonctionnera.
+        L'alimentation de l'ordinateur se présente sous la forme d'un boîtier.
+        Ce bloc transforme et fournit l'énergie nécessaire à la carte mère, mais
+        il est aussi relié à certains composants comme le stockage. La
+        transformation du courant cause une perte d'énergie prenant la forme de
+        chaleur. Un système de ventilation est donc également installé dans le
+        coffret et expulse l'air via l'arrière du boîtier de l'ordinateur.
+      </p>
+
+      <br /><br /><br /><br /><br /><br />
+      <div class="entete" id="bas">
+        <br /><br />
+        <p class="crédit">
+          "L'intérieur des PC" est un site créé par 3 étudiants de L2 à EFREI
+          Paris à l'occasion d'un projet de programmation en 2020
+        </p>
+        <nav role="navigation" class="primary-navigation" id="bas">
+          <ul>
+            <li><a href="Quisommesnous.html">Qui sommes-nous</a></li>
+          </ul>
+        </nav>
+      </div>
+    </body>
+  </div>
+</template>
+
+<script>
+</script>

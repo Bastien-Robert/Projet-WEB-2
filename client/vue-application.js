@@ -1,15 +1,19 @@
 const Home = window.httpVueLoader('./components/Home.vue')
 const Connexion = window.httpVueLoader('./components/Connexion.vue')
 const Register = window.httpVueLoader('./components/Register.vue')
+const Avousdejouer = window.httpVueLoader('./components/Avousdejouer.vue')
+const Boutique = window.httpVueLoader('./components/Boutique.vue')
+const Composants = window.httpVueLoader('./components/Composants.vue')
+const Quisommesnous = window.httpVueLoader('./components/Quisommesnous.vue')
 
 const routes = [
   { path: '/', component: Home },
   { path: '/connexion', component: Connexion },
   { path: '/register', component: Register },
-  { path: '/composants', component: Home},
-  { path: '/boutique', component: Home },
-  { path: '/avousdejouer', component: Home },
-  { path: '/quisommesnous', component: Home },
+  { path: '/composants', component: Composants},
+  { path: '/boutique', component: Boutique },
+  { path: '/avousdejouer', component: Avousdejouer },
+  { path: '/quisommesnous', component: Quisommesnous },
 ]
 
 const router = new VueRouter({
