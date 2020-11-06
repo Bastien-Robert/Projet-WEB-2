@@ -47,6 +47,7 @@ var app = new Vue({
         async addComposant(composant){
           const res = await axios.post('/api/ajouter',{composant:composant})
           this.composants.push(res.data) 
+          window.location.href="#/"
         }
 
     }
