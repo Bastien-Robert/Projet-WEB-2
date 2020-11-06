@@ -25,6 +25,14 @@ async function save(email, password) {
     })
 }
 
+async function addComposant(composant, marque, nom, prix, image) {
+    const sql = "INSERT INTO articles (composant, marque, nom, prix, image) VALUES ($1, $2, $3, $4, $5) RETURNING *"
+    return await client.query({
+        text: sql,
+        values: [composant, marque, nom, prix, image]
+    })
+}
+
 async function verifmail(email) {
     return await client.query({
         text: "SELECT * FROM users WHERE email=$1",
@@ -80,6 +88,16 @@ router.post('/connexion', (req, res) => {
             }
         })
     })
+})
+
+router.post('/ajouter', (req,res) =>{
+    const composant = req.body.composant.composant;
+    const marque = req.body.composant.marque;
+    const nom = req.body.composant.nom;
+    const prix = req.body.composant.prix;
+    const image = req.body.composant.image;
+
+    addComposant(composant, marque, nom, prix, image)
 })
 
 

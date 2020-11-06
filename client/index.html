@@ -6,7 +6,6 @@
   <script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <link href='Projet.css' type='text/css' rel='stylesheet' />
-  <script type="text/javascript" src="Projet.js"></script>
   <title>L'intérieur des PC</title>
 </head>
 
@@ -39,6 +38,8 @@
     <router-view 
     @log-user='logUser'
     @save-user='save'
+    @add-composants='addComposant'
+    :composants='composants'
     ></router-view>
 
     
