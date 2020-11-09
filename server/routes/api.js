@@ -97,7 +97,10 @@ router.post('/ajouter', (req,res) =>{
     const prix = req.body.composant.prix;
     const image = req.body.composant.image;
 
-    addComposant(composant, marque, nom, prix, image)
+    addComposant(composant, marque, nom, prix, image).then(accepte=>{
+        res.status(500).json({ message: 'composant ajouté' })
+    })
+   
 })
 
 
