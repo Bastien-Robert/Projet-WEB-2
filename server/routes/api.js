@@ -125,7 +125,6 @@ router.get('/composant', async(req, res) => {
     })
 
     res.json(result.rows)
-
 })
 
 router.get('/composant/:id', async(req, res) => {
