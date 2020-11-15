@@ -1,10 +1,17 @@
 <template>
     <div id ="connexion">
         <form @submit.prevent="log">
-            <input type="text" v-model="email" placeholder="Entrez votre e-mail"/>
-            <input type="text" v-model="password" placeholder="Entrez votre mot de passe"/>
-            <button type="submit">Envoyer</button>
-            <a href="#/register">Creer votre compte</a>
+            <div class="div-connexion">
+                <input class="texte-connexion" type="text" v-model="email" placeholder="Entrez votre e-mail"/>
+                <br/>
+                <input class="texte-connexion" type="text" v-model="password" placeholder="Entrez votre mot de passe"/>
+            </div>
+            <br/>
+            <div class="div-button">
+                <button class="button-connexion" type="submit">Envoyer</button>
+                <br/>
+                <a class="button-connexion" href="#/register">Creer votre compte</a>
+            </div>
         </form>
     </div>
 </template>

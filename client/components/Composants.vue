@@ -118,7 +118,7 @@
       <h2 id="stockage" class="titre-composants">Le stockage</h2>
       <img
         class="comp"
-        src="https://media.materiel.net/r550/oproducts/AR201805310150_g1.jpg"
+        src="https://media.ldlc.com/r1600/ld/products/00/05/69/47/LD0005694782_1.jpg"
       />
       <p class="par-composants">
         HDD, pour "Hard Disk Drive", désigne un disque dur. C'est une mémoire de
@@ -146,21 +146,6 @@
       </p>
 
       <br /><br /><br /><br /><br /><br />
-      <div class="entete" id="bas">
-        <br /><br />
-        <p class="crédit">
-          "L'intérieur des PC" est un site créé par 3 étudiants de L2 à EFREI
-          Paris à l'occasion d'un projet de programmation en 2020
-        </p>
-        <nav role="navigation" class="primary-navigation" id="bas">
-          <ul>
-            <li><a href="Quisommesnous.html">Qui sommes-nous</a></li>
-          </ul>
-        </nav>
-      </div>
     </body>
   </div>
 </template>
-
-<script>
-</script>

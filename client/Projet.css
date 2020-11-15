@@ -46,7 +46,6 @@ body.corps p.crédit{
 
 .entete
 {
-    margin: 0;
     border-bottom: 5px solid;
     border-color: rgb(214, 96, 16);
     background: url(images/CM.jpg);
@@ -238,11 +237,22 @@ tr:hover {
     background-color: #f5f5f5;
 }
 
-#button1
-{
+.button1 {
+    margin-left: 47%;
     color: rgb(214, 96, 16);
     font-family: Impact, fantasy;
-    font-size: 20px;
+    font-size: 30px;
+}
+
+.button-boutique {
+    color: rgb(214, 96, 16);
+    font-family: Impact, fantasy;
+    font-size: 18px;
+}
+
+.texte-boutique {
+    font-family: Impact, fantasy;
+    font-size: 18px;
 }
 
 img.comp {
@@ -272,7 +282,7 @@ img.comp {
 
 img.nous{
     width: 150px;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
     -webkit-transition: all 1s ease; /* Safari et Chrome */
     -moz-transition: all 1s ease; /* Firefox */
     -ms-transition: all 1s ease; /* Internet Explorer 9 */
@@ -318,17 +328,12 @@ a.nos-reseaux-I:hover {
 }
 
 #BR{
-    margin-left: 10%;
-    position: absolute;
-}
-
-#LLB{
-    margin-left: 45%;
+    margin-left: 35%;
     position: absolute;
 }
 
 #LB{
-    margin-left: 80%;
+    margin-left: 55%;
     position: absolute;
 }
 
@@ -398,7 +403,7 @@ li.ordi p.carac{
 {
     width: 1920px;
     height: 1080px;
-    max-width: 100%;
+    max-width: 101%;
     height: auto;    
     z-index: 0;
     position: absolute;
@@ -407,12 +412,6 @@ li.ordi p.carac{
 .liste-PC {
     margin-top:10px;
     margin-left:200px;
-}
-
-.description {
-    margin-top: 350px;
-    font-family: Impact, fantasy;
-    text-indent: -80px;
 }
 
 .titre_index
@@ -477,4 +476,61 @@ li.ordi p.carac{
 footer{
     background-color: rgb(214, 96, 16);
     text-align: center;
+}
+
+.container_composants {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.composant {
+    font-family: Impact, fantasy;
+    margin: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 3px 3px 5px black;
+    border-radius: 7px;
+    position: relative;
+    background: rgb(69,68,94);
+    background: linear-gradient(0deg, rgba(69,68,94,1) 0%, rgba(237,237,239,1) 35%, rgba(255,255,255,1) 72%);
+}
+
+.composant img {
+    width: 250px;
+}
+
+.delete {
+    font-size: 20px;
+    width: 15px;
+    font-family: OCR A Std, monospace;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.texte-composant {
+    text-align: center;
+}
+
+.button-connexion {
+    color: rgb(214, 96, 16);
+    font-family: Impact, fantasy;
+    font-size: 18px;
+}
+
+.div-connexion {
+    text-align: center;
+    margin-top: 25%;
+}
+
+.div-button {
+    text-align: center;
+}
+
+.texte-connexion {
+    font-family: Impact, fantasy;
+    font-size: 18px;
 }
