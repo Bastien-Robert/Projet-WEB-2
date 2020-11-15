@@ -6,7 +6,7 @@
       <br /><br /><br /><br />
 
       <div class="form">
-        <select name="CPU" id="CPU">
+        <select name="CPU" id="CPU" v-for="">
           <option value="">Saisir votre marque de CPU</option>
           <option value="Intel">Intel</option>
           <option value="AMD">AMD</option>
@@ -50,7 +50,7 @@
         </select>
       </div>
       <br /><br />
-      <button id="button1" type="submit" onclick="addline()">Ajouter</button>
+      <button id="button1" type="submit" @click="addline()">Ajouter</button>
 
       <br /><br /><br /><br />
       <table cellpadding="15" id="table" class="case">
@@ -86,7 +86,17 @@
 </template>
 
 <script>
-function addline() {
+module.exports ={
+    props: {
+    composants: { type: Array, default: [] }
+  },
+  data(){
+    return{
+
+    }
+  },
+  methods:{
+  addline() {
   var CPU = document.getElementById("CPU").value;
   var GPU = document.getElementById("GPU").value;
   var ram = document.getElementById("ram").value;
@@ -109,5 +119,10 @@ function addline() {
   cel4.innerText = refroidissement;
   cel5.innerText = stockage;
   cel6.innerText = alim;
+  }
 }
+}
+
+
+
 </script>

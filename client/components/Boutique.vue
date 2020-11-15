@@ -20,12 +20,29 @@
           <button class="add" type="submit">Ajouter</button>
       </form>
 
+      <form>
+        <h2>Filtre</h2>
+        <select type="text" v-model="of_type">
+          <option value="">Tout</option>
+          <option value="CPU">CPU</option>
+          <option value="GPU">GPU</option>
+          <option value="RAM">RAM</option>
+          <option value="Carte-mère">Carte-mère</option>
+          <option value="Refroidissement">Refroidissement</option>
+          <option value="Stockage">Stockage</option>
+          <option value="Alimentation">Alimentation</option>
+          <option value="Boîtier">Boîtier</option>
+        </select>
+        <button class="add" type="submit">Filtrer</button>
+      </form>
       <div id="container_composants">
         <div class="composant" v-for="composant in composants" :key="composant.id">
+          <div v-if="IsTypeOf(of_type, composant.type)">
           <h1>{{composant.type}}</h1>
           <p class="delete" @click="deleteComposant(composant.id)">X</p>
           <p>{{composant.marque}} · {{composant.nom}} · {{composant.prix}}</p>
           <img :src="composant.image" alt="composant">
+          </div>
         </div>
       </div>
       
@@ -45,7 +62,8 @@ module.exports = {
             nom: "",
             prix: 0,
             image: ""
-        }
+        },
+        of_type:"",
       }
   },
   methods: {
@@ -54,6 +72,15 @@ module.exports = {
     },
     deleteComposant(composantid) {
       this.$emit('delete-composant', composantid)
+    },
+    IsTypeOf(of_type, composantType){
+      if ((of_type==composantType)||(of_type=="")){
+        return true;
+      }
+      else{
+        return false;
+      }
+
     }
   }
 }

@@ -150,6 +150,24 @@ router.get('/composant/:id', async(req, res) => {
     res.json(result.rows[0])
 })
 
+router.get('/composant/:type', async(req, res) => {
+    // récuperer l'information dans l'url
+    let type = parseInt(req.params.type);
+
+    // verifie si utilisateur connecté
+    if (req.session.userId === undefined) {
+        res.status(401).json({ message: 'Unauthorized' })
+        return
+    }
+    // reenvoyer une reponse au client
+    let result = await client.query({
+        text: "SELECT * FROM composants WHERE type=$1",
+        values: [type]
+    })
+
+    res.json(result.rows[0])
+})
+
 router.post('/composant', async(req, res) => {
     // récuperer l'information
     const type = req.body.type;
