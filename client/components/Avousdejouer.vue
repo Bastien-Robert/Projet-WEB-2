@@ -2,67 +2,72 @@
   <div>
     <body class="AVDJ">
       <p class="titre">A Vous de Jouer</p>
-
       <br /><br /><br /><br />
 
       <div class="form">
-        <select name="CPU" id="CPU" v-for="">
-          <option value="">Saisir votre marque de CPU</option>
-          <option value="Intel">Intel</option>
-          <option value="AMD">AMD</option>
+        <select name="CPU" id="CPU" v-model="newOrdi.cpu">
+          <option value="">Saisir le nom de votre CPU</option>
+          <option v-for="composant in composants" :key="composant.id" :value="composant.nom" v-show="IsTypeOf('CPU', composant.type)">
+              {{composant.nom}}
+          </option>
         </select>
 
-        <select name="GPU" id="GPU">
-          <option value="">Saisir votre marque de GPU</option>
-          <option value="Nvidia">Nvidia</option>
-          <option value="AMD">AMD</option>
+        <select name="GPU" id="GPU" v-model="newOrdi.gpu">
+          <option value="">Saisir le nom de votre GPU</option>
+          <option v-for="composant in composants" :key="composant.id" :value="composant.nom" v-show="IsTypeOf('GPU', composant.type)">
+              {{composant.nom}}
+          </option>
         </select>
 
-        <select name="ram" id="ram">
+        <select name="ram" id="ram" v-model="newOrdi.ram">
           <option value="">Saisir votre RAM</option>
-          <option value="4 Go">4 Go</option>
-          <option value="8 Go">8 Go</option>
-          <option value="16 Go">16 Go</option>
-          <option value="32 Go">32 Go</option>
-          <option value="64 Go">64 Go</option>
+          <option v-for="composant in composants" :key="composant.id" :value="composant.nom" v-show="IsTypeOf('RAM', composant.type)">
+              {{composant.nom}}
+          </option>
         </select>
 
-        <select name="refroidissement" id="refroidissement">
+        <select name="refroidissement" id="refroidissement" v-model="newOrdi.refroidissement">
           <option value="">Choisissez un refroidissement</option>
-          <option value="aircooling">aircooling</option>
-          <option value="watercooling">watercooling</option>
+          <option v-for="composant in composants" :key="composant.id" :value="composant.nom" v-show="IsTypeOf('Refroidissement', composant.type)">
+              {{composant.nom}}
+          </option>
         </select>
 
-        <select name="stockage" id="stockage">
+        <select name="stockage" id="stockage" v-model="newOrdi.stockage">
           <option value="">Choisissez un format de stockage</option>
-          <option value="HDD">HDD</option>
-          <option value="SSD">SSD</option>
+          <option v-for="composant in composants" :key="composant.id" :value="composant.nom" v-show="IsTypeOf('Stockage', composant.type)">
+              {{composant.nom}}
+          </option>
         </select>
 
-        <select name="alim" id="alim">
+        <select name="alim" id="alim" v-model="newOrdi.alimentation">
           <option value="">Choisissez une alimentation</option>
-          <option value="250 W">250 W</option>
-          <option value="450 W">450 W</option>
-          <option value="500 W">500 W</option>
-          <option value="550 W">550 W</option>
-          <option value="750 W">750 W</option>
-          <option value="1000 W">1000 W</option>
+          <option v-for="composant in composants" :key="composant.id" :value="composant.nom" v-show="IsTypeOf('Alimentation', composant.type)">
+              {{composant.nom}}
+          </option>
         </select>
       </div>
       <br /><br />
-      <button class="button1" type="submit" @click="addline()">Ajouter</button>
+      <button class="button1" type="submit" @click="addOrdi()">Ajouter</button>
 
       <br /><br /><br /><br />
       <table cellpadding="15" id="table" class="case">
         <caption>
           Votre ordinateur :
         </caption>
-        <tr>
+        <tr> 
           <td>CPU</td>
           <td>GPU</td>
           <td>RAM</td>
           <td>Refroidissement</td>
-          <br />
+          <td>Stockage</td>
+          <td>Alimentation</td>
+        </tr>
+        <tr v-for="ordinateur in ordinateurs" :key="ordinateur.id">
+          <td>{{ordinateur.cpu}}</td>
+          <td>GPU</td>
+          <td>RAM</td>
+          <td>Refroidissement</td>
           <td>Stockage</td>
           <td>Alimentation</td>
         </tr>
@@ -76,11 +81,19 @@
 <script>
 module.exports ={
     props: {
-    composants: { type: Array, default: [] }
+    composants: { type: Array, default: [] },
+    ordinateurs: { type: Array, default: [] }
   },
   data(){
     return{
-
+      newOrdi:{
+        cpu: "",
+        gpu: "",
+        refroidissement: "",
+        stockage: "",
+        ram: "",
+        alimentation: ""
+      }
     }
   },
   methods:{
@@ -107,6 +120,19 @@ module.exports ={
   cel4.innerText = refroidissement;
   cel5.innerText = stockage;
   cel6.innerText = alim;
+  },
+  addOrdi(){
+    this.$emit('add-ordi', this.newOrdi)
+  },
+
+  IsTypeOf(of_type, composantType){
+    if ((of_type==composantType)||(of_type=="")){
+        return true;
+      }
+      else{
+        return false;
+      }
+
   }
 }
 }

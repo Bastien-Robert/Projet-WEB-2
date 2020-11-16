@@ -261,4 +261,45 @@ router.delete('/composant/:id', async(req, res) => {
     res.send()
 })
 
+
+
+
+//composants
+
+router.post('/Avousdejouer', async(req, res) => {
+    // récuperer l'information
+    const username = req.session.userId;
+    const cpu = req.body.cpu;
+    const gpu = req.body.gpu;
+    const refroidissement = req.body.refroidissement;
+    const stockage = req.body.stockage;
+    const alimentation = req.body.alimentation;
+    const ram = req.body.ram;
+
+    //verifie la fiabilité de l'info
+    /*if (typeof cpu !== 'string' || cpu === '' ||
+        typeof gpu !== 'string' || gpu === '' ||
+        typeof refroidissement !== 'string' || refroidissement === '' ||
+        typeof stockage !== 'string' || stockage === '' ||
+        typeof alimentation !== 'string' || alimentation === '') {
+        res.status(400).json({ message: 'bad request' })
+        return
+    }*/
+    // verifie si utilisateur connecté
+    if (req.session.userId === undefined) {
+        res.status(401).json({ message: 'Unauthorized' })
+        return
+    }
+
+    // ajouter le composant
+    let result = await client.query({
+        text: "INSERT INTO ordinateur (username, cpu, gpu, refroidissement, stockage, alimentation, ram) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *",
+        values: [username, cpu, gpu, refroidissement, stockage, alimentation, ram]
+    })
+
+    // reenvoyer une reponse au client
+    res.json(result.rows[0])
+})
+
+
 module.exports = router

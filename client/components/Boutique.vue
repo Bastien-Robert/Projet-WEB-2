@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent="addComposant">
+        <form @submit.prevent="addComposant">
           <h2 class="titre-composants">Nouveau produit à ajouter</h2>
           <select class="texte-boutique" type="text" v-model="newComposant.type">
               <option value="">Type de composant</option>
@@ -43,8 +43,7 @@
           <img :src="composant.image" alt="composant">
           </div>
         </div>
-      </div>
-      
+      </div>  
   </div>
 </template>
 

@@ -55,5 +55,9 @@ var app = new Vue({
             let index = this.composants.findIndex(c => c.id === composantid)
             this.composants.splice(index, 1)
         },
+        async addOrdi(ordi) {
+            const res = await axios.post('/api/Avousdejouer', ordi)
+            this.ordi.push(res.data)
+        }
     }
 })
