@@ -2,6 +2,7 @@
     <div id ="connexion">
         <form @submit.prevent="log">
             <div class="div-connexion">
+                <p class="titre">Connectez-vous :</p>
                 <input class="texte-connexion" type="text" v-model="email" placeholder="Entrez votre e-mail"/>
                 <br/>
                 <input class="texte-connexion" type="text" v-model="password" placeholder="Entrez votre mot de passe"/>
@@ -10,7 +11,7 @@
             <div class="div-button">
                 <button class="button-connexion" type="submit">Envoyer</button>
                 <br/>
-                <a class="button-connexion" href="#/register">Creer votre compte</a>
+                <p class="texte-connexion">Cliquez ici pour <a class="button-connexion" href="#/Register">creer votre compte</a></p>
             </div>
         </form>
     </div>
