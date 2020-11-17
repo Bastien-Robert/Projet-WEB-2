@@ -65,12 +65,20 @@
         </tr>
         <tr v-for="ordinateur in ordinateurs" :key="ordinateur.id">
           <td>{{ordinateur.cpu}}</td>
+          <td>{{ordinateur.gpu}}</td>
+          <td>{{ordinateur.ram}}</td>
+          <td>{{ordinateur.refroidissement}}</td>
+          <td>{{ordinateur.stockage}}</td>
+          <td>{{ordinateur.alimentation}}</td>
+        </tr>
+        <!--<tr v-for="ordinateur in ordinateurs" :key="ordinateur.id">
+          <td>{{ordinateur.cpu}}</td>
           <td>GPU</td>
           <td>RAM</td>
           <td>Refroidissement</td>
           <td>Stockage</td>
           <td>Alimentation</td>
-        </tr>
+        </tr>-->
       </table>
 
       <br /><br /><br /><br /><br /><br />

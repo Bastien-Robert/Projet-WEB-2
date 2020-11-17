@@ -24,11 +24,12 @@ var app = new Vue({
     router,
     el: '#app',
     data: {
-        composants: []
+        composants: [],
+        ordinateurs: []
     },
     async mounted() {
-        const res = await axios.get('/api/composant')
-        this.composants = res.data
+        axios.get('/api/composant').then(res =>this.composants = res.data)
+        axios.get('/api/Avousdejouer').then(res =>this.ordinateurs = res.data)
     },
     methods: {
         async save(email, password) {
@@ -38,6 +39,7 @@ var app = new Vue({
         async logUser(email, password) {
             try {
                 const res = await axios.post('/api/connexion', { email: email, password: password })
+                axios.get('/api/Avousdejouer').then(res =>this.ordinateurs = res.data)
                 window.location.href = "#/"
 
             } catch (error) {
@@ -57,7 +59,7 @@ var app = new Vue({
         },
         async addOrdi(ordi) {
             const res = await axios.post('/api/Avousdejouer', ordi)
-            this.ordi.push(res.data)
+            this.ordinateurs.push(res.data)
         }
     }
 })
