@@ -35,8 +35,8 @@
         </select>
       </form>
       <div class="container_composants">
-        <div class="composant" v-for="composant in composants" :key="composant.id">
-          <div v-if="IsTypeOf(of_type, composant.type)">
+        <div v-for="composant in composants" :key="composant.id">
+          <div class="composant" v-if="IsTypeOf(of_type, composant.type)">
           <h1 class="titre-composant">{{composant.marque}} {{composant.nom}}</h1>
           <p class="texte-composant">{{composant.type}}</p>
           <p class="delete" @click="deleteComposant(composant.id)">X</p>
