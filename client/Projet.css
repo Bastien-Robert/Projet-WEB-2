@@ -247,11 +247,13 @@ tr:hover {
     color: rgb(214, 96, 16);
     font-family: Impact, fantasy;
     font-size: 18px;
+    margin-left: 3%;
 }
 
 .texte-boutique {
     font-family: Impact, fantasy;
-    font-size: 18px;
+    font-size: 20px;
+    margin-left: 3%;
 }
 
 img.comp {
@@ -264,6 +266,7 @@ img.comp {
     font-size: 30px;
     font-family: Impact, fantasy;
     color: rgb(214, 96, 16);
+    margin-left: 3%;
 }
 
 .titre-composants-petit {
@@ -281,7 +284,6 @@ img.comp {
 
 img.nous{
     width: 150px;
-    /*border-radius: 50%;*/
     -webkit-transition: all 1s ease; /* Safari et Chrome */
     -moz-transition: all 1s ease; /* Firefox */
     -ms-transition: all 1s ease; /* Internet Explorer 9 */
@@ -483,20 +485,36 @@ footer{
 }
 
 .composant {
+    -webkit-transition: all 1s ease; /* Safari et Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* Internet Explorer 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
     font-family: Impact, fantasy;
-    margin: 15px;
+    margin: 30px;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     box-shadow: 3px 3px 5px black;
     border-radius: 7px;
     position: relative;
-    background: rgb(69,68,94);
-    background: linear-gradient(0deg, rgba(69,68,94,1) 0%, rgba(237,237,239,1) 35%, rgba(255,255,255,1) 72%);
+    width: 300px;
+    height: 480px;
+    background-color: rgb(228, 222, 222);
+}
+
+.composant:hover {
+    -webkit-transform:scale(1.2); /* Safari et Chrome */
+    -moz-transform:scale(1.2); /* Firefox */
+    -ms-transform:scale(1.2); /* Internet Explorer 9 */
+    -o-transform:scale(1.2); /* Opera */
+    transform:scale(1.2);
 }
 
 .composant img {
     width: 250px;
+    margin-top: 2%;
+    margin-left: 8%;
 }
 
 .delete {
@@ -512,12 +530,26 @@ footer{
 
 .texte-composant {
     text-align: center;
+    font-size: 25px;
+}
+
+.titre-composant {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(214, 96, 16);
+    margin-top: 15%;
 }
 
 .button-connexion {
     color: rgb(214, 96, 16);
     font-family: Impact, fantasy;
     font-size: 18px;
+}
+
+.prix-composant {
+    text-align: center;
+    font-size: 25px;
+    color: rgb(214, 96, 16);
 }
 
 .div-connexion {

@@ -37,9 +37,10 @@
       <div class="container_composants">
         <div class="composant" v-for="composant in composants" :key="composant.id">
           <div v-if="IsTypeOf(of_type, composant.type)">
-          <h1 class="texte-composant">{{composant.type}}</h1>
+          <h1 class="titre-composant">{{composant.marque}} {{composant.nom}}</h1>
+          <p class="texte-composant">{{composant.type}}</p>
           <p class="delete" @click="deleteComposant(composant.id)">X</p>
-          <p class="texte-composant">{{composant.marque}} · {{composant.nom}} · {{composant.prix}}</p>
+          <p class="prix-composant">{{composant.prix}}€</p>
           <img :src="composant.image" alt="composant">
           </div>
         </div>

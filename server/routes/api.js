@@ -96,22 +96,6 @@ router.post('/connexion', (req, res) => {
  *  Composant
  */
 
-
-/**
- * Récupération d’une liste d’items           GET    /composant
- * Récupération d’un item en particulier      GET    /composant/:id
- * Création d’un Item                         POST   /composant       {nom: , prix: ..}
- * Modification d’un Item                     PUT    /composant/:id   {nom: , prix: ..}
- * Suppression d’un Item                      DELETE /composant/:id
- */
-
-/**
- * SELECT * FROM table
- * INSERT INTO table(column1,column2,..) VALUES (12,'fre','gerr',...)
- * UPDATE table SET column2='mdr' WHERE column3='12'
- * DELETE FROM table
- */
-
 router.get('/composant', async(req, res) => {
     // verifie si utilisateur connecté
     if (req.session.userId === undefined) {
@@ -292,15 +276,6 @@ router.post('/Avousdejouer', async(req, res) => {
     const alimentation = req.body.alimentation;
     const ram = req.body.ram;
 
-    //verifie la fiabilité de l'info
-    /*if (typeof cpu !== 'string' || cpu === '' ||
-        typeof gpu !== 'string' || gpu === '' ||
-        typeof refroidissement !== 'string' || refroidissement === '' ||
-        typeof stockage !== 'string' || stockage === '' ||
-        typeof alimentation !== 'string' || alimentation === '') {
-        res.status(400).json({ message: 'bad request' })
-        return
-    }*/
     // verifie si utilisateur connecté
     if (req.session.userId === undefined) {
         res.status(401).json({ message: 'Unauthorized' })
