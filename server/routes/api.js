@@ -236,7 +236,7 @@ router.delete('/composant/:id', async(req, res) => {
         res.status(401).json({ message: 'Unauthorized' })
         return
     }
-    // reenvoyer une reponse au client
+    // réenvoyer une reponse au client
     await client.query({
         text: "DELETE FROM composants WHERE id=$1",
         values: [id]
